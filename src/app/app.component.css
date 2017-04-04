@@ -1,0 +1,9 @@
+#scroll-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+}

@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  transition-duration: 0.4s;
+}
+body {
+    overflow-x: hidden;
+}
+.unrounded {
+  border-radius: 0!important;
+}
+
+/* loader styles */
+.loader-circles {
+  display: flex;
+  justify-content: center;
+  /*background-color: #00468b;*/
+  padding: 15px 0
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border:2px solid #cecece;
+  border-top-color: transparent;
+  position: relative;
+  transform: rotate(0deg);
+  animation: rotate 1.5s linear infinite;
+  transform-origin: center center;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 50% ;
+  left: 50%;
+  transform: translate(calc(-50%), calc(-50%)) rotate(0deg);
+  border-radius: 50%;
+  border: 2px solid #d52b62;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  animation: Srotate 3.5s linear infinite alternate;
+}
+.loader:after{
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 50% ;
+  left: 50%;
+  transform: translate(calc(-50%), calc(-50%)) rotate(0deg);
+  border-radius: 50%;
+  border: 2px solid #319dff;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  animation: Srotate 2.5s linear infinite ;
+}
+@keyframes rotate {
+  to {
+    transform-origin: center center;
+    transform: rotate(360deg);
+  }
+}
+@keyframes Srotate {
+  to {
+    transform-origin: center center;
+    transform: translate(calc(-50%), calc(-50%)) rotate(360deg);
+  }
+}
