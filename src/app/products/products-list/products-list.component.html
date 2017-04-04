@@ -1,0 +1,12 @@
+<section >
+    <h3 class="text-muted">{{productsLabel | uppercase | categorytype}} Products</h3>
+    <div class="row">
+        <div class="card-deck">
+            <app-single-product
+                class="card"
+                *ngFor="let product of products"
+                [product]="product"
+            ></app-single-product>
+        </div>
+    </div>
+</section> <!-- end of products section -->

@@ -1,0 +1,33 @@
+<br>
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col">
+                <div class="card-img">
+                    <img [src]="product.imageL" [attr.alt]="product.title" width="100%">
+                </div>
+            </div>
+            <div class="col pt-4">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action">
+                        <b>Title</b>: {{product.title}}
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <b>id</b>: {{product.id}}
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <b>category</b>: {{product.categoryId | categorytype}}
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <b>description</b>: {{product.desc}}
+                    </li>
+                    <li class="list-group-item list-group-item-action bg-danger "
+                    >
+                        <p class="text-center" [ngStyle]="{color:'#eee', 'text-align': 'center'}"><b>Price</b>: {{product.price | currency:'usd':true}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

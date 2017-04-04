@@ -1,0 +1,12 @@
+/* products page */
+#full-shop .col-md-3 .card {
+  margin-bottom: 10px;
+}
+#full-shop .col-md-3 .card:nth-child(2) .card-block {
+  padding: 0
+}
+
+#products .card .card-img-top {
+    min-height: 170px;
+}
+

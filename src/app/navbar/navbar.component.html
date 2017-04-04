@@ -1,0 +1,79 @@
+
+
+<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand mb-0" [routerLink]="['home']">
+    <img src="../assets/fmLogo.png" alt="icon" height="37px">
+  </a>
+
+  <!-- items in navbar and links -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li
+        class="nav-item"
+        *ngFor="let navItem of navItems"
+        >
+        <a  class="nav-link"
+            [routerLink]="[navItem.href]"
+            [routerLinkActive]="['active']"
+        >{{navItem.title}}</a>
+      </li>
+    </ul>
+    <div	class="dropdown ">
+      <button	class="btn	btn-secondary	 dropdown-btn"	type="button" id="dropdownMenu1"	data-toggle="dropdown"												aria-haspopup="true"	aria-expanded="false">you have <b>2</b> item(s) - 200,00$</button>
+      <div   	class="dropdown-menu"	aria-labelledby="dropdownMenu1">
+        <table class="table table-hover table-sm text-center bg-faded">
+
+
+          <thead class="thead-faded">
+          <tr>
+            <th>Name</th>
+            <th >Amount</th>
+            <th>Quantity</th>
+            <th>Sum</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th	scope="row">product 1</th>
+            <td> 10$</td>
+            <td>1x</td>
+            <td>10$</td>
+          </tr>
+          <tr>
+            <th	scope="row">Product 2</th>
+            <td>90$</td>
+            <td>2x</td>
+            <td>180$</td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="center-block text-center">
+          <div class="btn-group ">
+            <a class="btn btn-sm btn-success" [routerLink]="['/cart']">view cart</a>
+            <a class="btn btn-sm btn-primary" [routerLink]="['/checkout']">checkout</a>
+          </div>
+        </div>
+
+        <p class="total lead text-center">Total <b>200,00$</b></p>
+      </div>
+    </div>
+  </div>
+</nav><!-- End of the navbar -->
+
+<!--<div class="breadcrumb-container">-->
+  <!--<ol class="breadcrumb container">-->
+    <!--<li class="breadcrumb-item"><a href="">Home</a></li>-->
+    <!--<li class="breadcrumb-item"><a href="#">Market</a></li>-->
+    <!--<li class="breadcrumb-item active" href="/products">Product</li>-->
+    <!--<li class=" float-right">-->
+      <!--<div class="input-group input-group-sm">-->
+        <!--<input type="text" class="form-control currency-converter">-->
+        <!--<button class="btn btn-sm input-group-addon">convert</button>-->
+      <!--</div>-->
+    <!--</li>-->
+  <!--</ol>-->
+<!--</div>-->

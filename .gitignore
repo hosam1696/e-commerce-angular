@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+
 /tmp
 /out-tsc
 
@@ -40,19 +40,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-src/app/app-services/
-src/app/cart/
-src/app/checkout/
-src/app/footer/
-src/app/homepage.html
-src/app/homepage/
-src/app/navbar/
-src/app/products/
-src/app/signout/
-src/assets/fmLogo.png
-src/assets/item.png
-src/assets/stext.png
-src/assets/text.png
-src/bootstrap.min.css
-src/bootstrap.min.js
-src/jquery-2.1.3.min.js

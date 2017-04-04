@@ -1,0 +1,11 @@
+ #products .card .card-img-top {
+    min-height: 170px;
+}
+section.col-md-9 {
+    padding-right: 0;
+}
+#products .card {
+    padding-right:0;
+    padding-left: 0;
+    margin-bottom: 8px;
+}

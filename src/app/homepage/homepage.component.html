@@ -1,0 +1,75 @@
+
+<!-- start coding and styling the carousel -->
+<section id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators" >
+    <li *ngFor="let slider of sliders; let i=index"
+        data-target="#myCarousel"
+        [attr.data-slide-to]="i"
+        [ngClass]="{active: i ==0}"></li>
+  </ol><!-- carousel indicators -->
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item "
+         *ngFor="let slide of sliders ;let i = index"
+          [ngClass]="{active: i ==0}">
+      <img class="d-block img-fluid " width="100%" [src]="slide.image" [attr.alt]="slide.title">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{slide.title}}</h3>
+        <p>{{slide.desc}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--get customers attention-->
+<div	class="jumbotron">
+  <h1	class="display-3">FRESH	ORGANIC	MARKET</h1>
+  <p	class="lead">Nice	chance	to	save	a	lot	of	money</p>
+  <hr	class="m-y-2">
+  <p>We	are	open	7	Days	a	Week	7:00am	to	10:00pm</p>
+</div>
+
+<!-- coding categories cards-->
+<div class="container-fluid">
+  <section id="categories">
+    <div class="row">
+      <div class="col "
+           *ngFor="let category of categories"
+      >
+        <div class="card" >
+          <div class="card-img-top">
+            <img [src]="category.image"  [attr.alt]="category.title">
+          </div>
+          <div class="card-block">
+            <h4 class="card-title text-center">{{category.title}}</h4>
+            <p class="lead">{{category.desc}}</p>
+              <button class="btn btn-outline-secondary unrounded" (click)="filterProducts(category)">explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<br><br>
+<!-- new products section-->
+<section id="new-products">
+  <div class="container">
+    <h3 class="product-header text-danger">watch new products on store</h3>
+    <hr>
+    <div class="row">
+
+      <div class="card-deck">
+        <app-single-product
+            class="col-md-3"
+            *ngFor="let product of randomProducts(8)"
+            [product]="product"
+        ></app-single-product>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+

@@ -1,0 +1,20 @@
+<div class="card mb-2" >
+    <div class="card-img-top">
+        <img [src]="product.imageS" alt="product1" class="img-fluid center-block" width="100%">
+    </div>
+    <div class="card-block text-xs-center">
+        <h6 class="card-title">{{product.title}}
+            <span class="badge badge-pill badge-default" >{{product.categoryId | categorytype}}</span>
+            <span class="badge badge-pill badge-success float-right">{{product.price | currency:'usd':true}}</span>
+        </h6>
+        <hr>
+        <p>{{product.desc}}</p>
+        <div class="btn-group pl-md-4" role="group">
+            <button class="btn	btn-primary">Add to cart</button>
+            <a class="btn	btn-info"
+               [routerLink]="['/products/product', product.id]"
+               (click)="scrollToTop()">Info</a>
+
+        </div>
+    </div>
+</div>

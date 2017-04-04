@@ -1,0 +1,62 @@
+<!-- shop products -->
+<section id="full-shop">
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <!--the list of all products-->
+            <app-products-list
+                [products]="products"
+                [productsLabel]="productsLabel"
+                id="products" class="col-md-9"></app-products-list>
+            <div class="col-md-3">
+                <div class="card shop-search">
+                    <div class="card-header">
+                        <h6>search</h6>
+                    </div>
+                    <div class="card-block">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="search for..." #productSearch>
+                            <button class="btn btn-primary input-group-addon" (click)="searchProducts(productSearch.value)"> search</button>
+
+                        </div>
+                    </div>
+                </div><!-- end of search card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Categories</h6>
+                    </div>
+                    <div class="card-block">
+                        <ul class="list-group">
+
+                            <li
+
+                                *ngFor="let category of productsCat; let i= index"
+                                class="list-group-item list-group-item-action"
+                                (click) = "filterProducts(category, $event)"
+                                [ngClass]="{active:i==0}"
+                                [routerLink] = "['/products', category.categoryId]"
+                                >{{category.title}}</li>
+
+                        </ul>
+                    </div>
+                </div><!-- end of the category card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Tags</h4>
+                    </div>
+                    <div class="card-block">
+                        <span class="badge badge-default bg-inverse">cars</span>
+                        <span class="badge badge-default">mobile</span>
+                        <span class="badge badge-default">tablets</span>
+                        <span class="badge badge-default">shoes</span>
+                        <span class="badge badge-default">fruits</span>
+                        <span class="badge badge-default">bakery</span>
+                        <span class="badge badge-default">sea food</span>
+                        <span class="badge badge-default">salt food</span>
+                    </div>
+                </div>
+            </div> <!-- end of side cards -->
+        </div>
+    </div>
+</section>

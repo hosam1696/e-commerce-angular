@@ -1,0 +1,49 @@
+footer {
+  padding-top: 20px;
+  color: #858585;
+  background-color: #eee;
+    position: relative;
+    margin-top: 70px
+
+}
+footer .container {
+    position: relative;
+    z-index: 9;
+}
+#footer-end {
+  padding: 10px 0
+}
+
+footer:before {
+
+    position: absolute;
+    content: "";
+    width: 130%;
+    height: 200px;
+    background-color: #eee;
+    top: -20px;
+    left: -55px;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    z-index: 4;
+    border-radius: 200px / 65px;
+    border-top: 5px solid #d0d5d8;
+    box-shadow: 0 -2px  #d0d5d8;
+}
+
+footer .nav .nav-item a {
+    color: #ccc
+}
+footer .nav .nav-item a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #999;
+
+}
+footer .col .socials a:hover{
+    color: #fff;
+    cursor: pointer;
+}
+footer .col .socials a {
+    color : #414345;
+}
